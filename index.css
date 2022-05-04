@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+  /* padding-left: 25px; */
+  /* padding-right: 25px; */
+  background-color: rgb(4, 54, 4);
+}
+.courses-box {
+  width: 80%;
+  height: max-content;
+  background-color: yellow;
+  margin: 50px auto;
+  padding: 0 10px 30px 10px;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 25px;
+  padding-top: 10px;
+}
+ul {
+  background-color: aliceblue;
+  width: 95%;
+  height: fit-content;
+  margin: auto;
+}
+li {
+  border: 0.5px solid black;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.float-right {
+  float: right;
+}
+
+/* .btn {
+  background-color: aliceblue;
+} */
+
+button {
+  margin-left: 45%;
+  padding: 6px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: green;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-left: 40%;
+}
+.blueBtn {
+  background-color: blue;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 0%;
+}

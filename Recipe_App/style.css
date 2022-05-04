@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(216, 215, 209);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.mainContainer {
+  box-shadow: 2px 5px 15px black;
+  background-color: whitesmoke;
+}
+.headerWrapper {
+  width: 400px;
+  height: 70px;
+  /* background-color: blue; */
+  padding: 1rem 1rem 0 4rem;
+  /* display: flex; */
+  /* flex-direction: column; */
+  box-shadow: 0px 0px 5px black;
+}
+
+.headerWrapper input {
+  border: none;
+  font-family: inherit;
+  background-color: rgb(219, 215, 215);
+  padding: 0.2rem 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+.headerWrapper button {
+  cursor: pointer;
+  border: hidden;
+  padding: 0.2rem;
+  color: grey;
+  background-color: transparent;
+  margin-left: 10px;
+  outline: none;
+}
+.meal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  min-height: 600px;
+  font-family: inherit;
+  margin-top: 1rem;
+}
+
+.meal-container h1 {
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 2px black, 2px 2px 2px rgb(247, 14, 14);
+  color: rgb(185, 19, 75);
+}
+
+.dishWrapper {
+  overflow-x: scroll;
+  display: flex;
+  width: 400px;
+  height: 160px;
+  overflow-y: hidden;
+  text-align: center;
+}
+
+.dishWrapper > .textAlign {
+  display: block;
+  margin-top: 10px;
+  min-width: 150px;
+  height: 200px;
+   text-align: center;
+   padding: 0 5px;
+    position: relative;
+    cursor: pointer;
+}
+.textAlign > .image-wrapper {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  
+}
+.textAlign > .clearMeal {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  cursor: pointer;
+  opacity: 0;
+  
+}
+
+.textAlign:hover .clearMeal{
+  opacity: 1;
+
+}
+
+.textAlign > .image-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.dishWrapper > .textAlign p{
+  display: block;
+  width: 100%;
+  padding: 0 2px;
+  margin-top: 5px;
+  font-size: 0.6rem;
+  font-weight: bold /* text-shadow: 2px 2px 5px black/*, 2px 2px 2px black*/;
+  color: rgb(170, 5, 60);
+  
+ 
+}
+
+.meals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  padding: 1.2rem;
+  /* overflow: hidden; */
+
+  /* background-color: rgb(111, 0, 255); */
+}
+.meal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  /* background-color: aqua; */
+  overflow: hidden;
+}
+
+.dishWrapper::-webkit-scrollbar-thumb {
+  background-color: rgb(170, 5, 60);
+  border-radius: 20px;
+  border: 3px inset rgba(0, 0, 0, 0.3);
+}
+.dishWrapper::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin-inline: 0.5em;
+}
+
+.dishWrapper::-webkit-scrollbar {
+  width: 0.2rem;
+  height: 0.5em;
+}
+
+.meal-header {
+  width: 100%;
+  height: max-content;
+  /* background-color: brown; */
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.meal-header img {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 20px; */
+  object-fit: cover;
+}
+.meal-header .random-recipe {
+  position: absolute;
+  background-color: white;
+  top: 20px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.meal-body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: brown; */
+  padding: 1rem;
+}
+
+.meal-body h4 {
+  padding-right: 1rem;
+  margin-right: 2.5rem;
+  margin-left: -15px;
+  /* margin-left: 2rem; */
+  /* background-color: yellow; */
+}
+.meal-body .fav-btn {
+  background-color: transparent;
+  color: rgb(192, 190, 190);
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  outline: none;
+}
+.meal-body .fav-btn.active {
+  color: rgb(170, 5, 60);
+}
+.popup-container{
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+.popup-container.hidden{
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+.meal-info{
+  display:block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 600px;
+  max-width: 100%;
+  background-color: beige;
+  padding: 1rem;
+    padding-top: 2rem;
+  border-radius: 10px;
+position: relative;
+overflow-y: auto;
+overflow-x: hidden;
+margin-top: 60px;
+
+}
+.popup-info{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height:fit-content;
+  /* background-color: aqua; */
+  position: relative;
+}
+
+.popup-info h1{
+  text-align: center;
+  margin: 10px;
+}
+.popup-info img{
+  width: 100%;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  object-fit: contain;
+  
+}
+.popup-info p{
+  font-size: 16px;
+  padding: 1rem 0;
+}
+
+ul{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-self: flex-end;
+  padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    /* background-color: blueviolet; */
+}
+
+ h3{
+   display: flex;
+   align-self: flex-start;
+   margin-top: -10px;
+ }
+
+li{
+    font-size: 16px;
+  list-style-type:square ;
+}
+
+ .close-popup{
+position: absolute;
+font-size: 1.2rem;
+background-color: transparent;
+top: -1%;
+right:3%;
+z-index: 22;
+border: none;
+cursor: pointer;
+outline: none;
+/* background-color:rgb(20, 116, 201); */
+
+}
+
+.meal-info::-webkit-scrollbar-thumb {
+  background-color: rgb(170, 5, 60);
+  border-radius: 20px;
+  border: 3px inset rgba(0, 0, 0, 0.3);
+}
+
+.meal-info::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.meal-info::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5em;
+}
