@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+  </head>
+  <body>
+    <main class="mainContainer">
+      <div class="generator-container">
+        <div class="generator-header">
+          <div class="copied-notification hide" id="copied">
+            <p>Successfully copied to Clipboard</p>
+          </div>
+          <div id="view-input" class="view-input"></div>
+
+          <button id="copy">
+            <i class="far fa-copy"></i>
+          </button>
+        </div>
+        <div class="generator-body">
+          <div class="input-control">
+            <label for="len" style="cursor: context-menu"
+              >Password Length</label
+            >
+            <input
+              type="number"
+              id="len"
+              min="4"
+              max="40"
+              value="7"
+              style="cursor: text; outline: none"
+            />
+          </div>
+          <div class="input-control">
+            <label for="uppercase">Add Uppercase</label>
+            <input type="checkbox" id="uppercase" />
+          </div>
+          <div class="input-control">
+            <label for="lowercase">Add Lowercase</label>
+            <input type="checkbox" id="lowercase" />
+          </div>
+          <div class="input-control">
+            <label for="number">Add Numbers</label>
+            <input type="checkbox" id="number" />
+          </div>
+          <div class="input-control">
+            <label for="symbols">Add Symbols</label>
+            <input type="checkbox" id="symbols" />
+          </div>
+          <button class="generate-btn" id="generate-btn">
+            Generate Password
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

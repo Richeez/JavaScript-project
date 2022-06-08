@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mainContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(14, 90, 231, 0.849);
+    background: radial-gradient(at bottom left, rgb(5, 48, 128), rgb(76, 76, 250));
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lucida Sans",
+  "Lucida Sans Regular",
+  "Lucida Grande",
+  "Lucida Sans Unicode",
+  Geneva,
+  Verdana,
+  sans-serif;
+}
+
+.mainContainer h1 {
+  /* font-weight: normal; */
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  margin-top: -5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-style: italic;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.generator-container{
+  width: 400px;
+  max-width: 100%;
+  height: 410px;
+  max-height: 100vh;
+  background-color: rgb(13, 13, 119);
+  background: radial-gradient( at bottom right, rgb(13, 13, 119),rgb(58, 58, 255));
+  border-radius: 20px;
+  box-shadow: 1px 2px 5px;
+    overflow: hidden;
+}
+
+.generator-header{
+  width: 100%;
+  height: 100px;
+  background-color: rgb(85, 9, 172);
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+position: relative;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+}
+
+.copied-notification{
+  width: 115px;
+  position: absolute;
+  height: fit-content;
+  background-color: rgba(3, 2, 61, 0.781);
+  left: 3%;
+  top: 1%;
+  border-radius: 3px;
+}
+.copied-notification p{
+   font-size: 0.6rem;
+   color: bisque;
+   word-break: break-all;
+}
+
+.copied-notification.hide{
+  opacity: 0;
+}
+
+
+.view-input{
+  width: 100%;
+  height: 100%;
+  color: rgb(85, 9, 172);
+  background-color: rgb(235, 235, 227);
+  padding: 1rem 0.5rem;
+  overflow-y: hidden;
+  overflow-x: auto;
+
+
+}
+.view-input::-webkit-scrollbar-thumb {
+  background-color: rgb(85, 9, 172);
+  border-radius: 20px;
+  border: 3px inset rgba(0, 0, 0, 0.3);
+}
+
+.view-input::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.view-input::-webkit-scrollbar {
+  width: 0.2rem;
+  height: 0.2em;
+}
+
+.generator-header button{
+  font-size: 0.8rem;
+  color: white;
+    background-color: rgba(14, 90, 231, 0.849);
+  background: linear-gradient( rgb(13, 13, 119)50%,rgb(85, 9, 172) 50%);  
+  border-radius: 5px;
+  position: absolute;
+  padding: 0.2rem;
+  bottom: -13%;
+  font-weight: bold;
+  right: 5%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+.generator-body{
+  width: 100%;
+  height: 100%;
+  /* background-color: brown; */
+  padding: 5px 1rem;
+  position: relative;
+  /* overflow: hidden; */
+
+}
+
+.input-control{
+  display: flex;
+  flex-basis: 100%;
+  /* background-color: aqua; */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+
+}
+
+.input-control label{
+  font-size: 0.9rem;
+  color: bisque;
+  cursor: pointer;
+}
+.input-control input{
+cursor: pointer;
+color: rgb(85, 9, 172);
+  
+
+}
+
+.generate-btn{
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 24%;
+  padding: 1rem;
+    background-color: rgb(85, 9, 172);
+      background: linear-gradient(to top right, rgba(13, 13, 119, 0.315)10%, rgba(85, 9, 172, 0.616) 50%,rgba(85, 9, 172, 0.616) 70%);
+    border: none;
+      color: bisque;
+        box-shadow: 1px 2px 5px;
+      cursor: pointer;
+      font-weight: bold;
+      outline: none;
+
+
+}
+
+.generate-btn:focus{
+  background-color: rgb(49, 14, 88);
+    background: linear-gradient(to top right, rgba(13, 13, 119, 0.615)10%, rgba(41, 7, 80, 0.616) 50%, rgba(85, 9, 172, 0.616) 70%);
+}
+
+
+

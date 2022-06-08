@@ -56,7 +56,8 @@ const timerCount = [
 
 
 const countDown = () => {
-    
+    //manipulating the DOM
+
     const display = document.querySelector(".timerContainer");
     // display.innerHTML="",
     timerCount.forEach((timerCount, index) => { 
@@ -151,7 +152,6 @@ theSeconds = document.getElementById("class3");
 const happyBirthDay = () => {
 
     
-    
     const newBdDate = new Date(bdDate);
     const currentDate = new Date();
     
@@ -161,6 +161,8 @@ const happyBirthDay = () => {
     const hours = Math.floor(totalSeconds / 3600) % 24;
     const mins = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
+
+     //displaying in the DOM and applying formatTime function 
     
      theDays.innerHTML = days;
     theHours.innerHTML  = formatTime(hours);

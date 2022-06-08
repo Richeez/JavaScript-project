@@ -28,12 +28,13 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+
 .note-wrapper{
   width: 400px;
   height: 600px;
   overflow: hidden;
   margin-top: 25px;
-  box-shadow: 0 0 10px 10px rgb(105, 93, 93);
+  box-shadow: 0 0 10px 5px rgb(105, 93, 93);
 }
 
 .menu-bar{

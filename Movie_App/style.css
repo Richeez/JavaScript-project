@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mainContainer {
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(15, 11, 83);
+  display: flex;
+padding: 10rem 1.5rem 4rem;
+border: none;
+flex-wrap: wrap;
+column-gap:40px;
+position: relative;
+  /* flex-direction: column; */
+   justify-content: flex-start; 
+  align-items: flex-start; 
+  font-family: "Lucida Sans",
+  "Lucida Sans Regular",
+  "Lucida Grande",
+  "Lucida Sans Unicode",
+  Geneva,
+  Verdana,
+  sans-serif;
+}
+
+.mainContainer h1 {
+  /* font-weight: normal; */
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  margin-top: -5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-style: italic;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.header{
+  width: 100%;
+  height: fit-content;
+  padding: 1rem 3rem;
+  background-color: rgba(6, 4, 51, 0.815);
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 5px 1px rgb(24, 13, 189);
+  position:fixed;
+  top: 0;
+  z-index: 9999;
+  border: none;
+  backdrop-filter: blur(8px);
+
+}
+
+.header .btn{
+  width: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color:transparent;
+  height: 100px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.header button{
+  padding:0.3rem;
+  width: 100px;
+  border-radius: 10px;
+  color: goldenrod;
+  /* border: none; */
+  outline: none;
+  cursor: pointer;
+    border: 2px solid rgb(19, 9, 207);
+    font-weight:500;
+      background-color: transparent;
+
+
+}
+
+.textContainer{
+position: relative;
+padding: 2rem 6.5rem 0.8rem;
+display: block;
+/* width:210px; */
+/* height:60px; */
+/* transition: 5s; */
+overflow: hidden;
+/* background-color: aqua; */
+margin-bottom: 10px;
+
+}
+
+     
+
+.textContainer .text1{
+  color: goldenrod;
+font-family: "Lucida Sans",
+"Lucida Sans Regular",
+"Lucida Grande",
+"Lucida Sans Unicode",
+Geneva,
+Verdana,
+sans-serif;
+position: absolute;
+cursor: pointer;
+transition: 2s ;
+z-index: 2;
+top: 5%;
+right: 0;
+bottom: 0;
+left: 0;
+}
+
+.text2{
+width: 0;
+    /* color: rgb(30, 21, 201); */
+    position: absolute;
+  top: 5%;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  font-family: "Lucida Sans",
+  "Lucida Sans Regular",
+  "Lucida Grande",
+  "Lucida Sans Unicode",
+  Geneva,
+  Verdana,
+  sans-serif;
+  cursor: pointer;
+  transition: 1ms ease-out;
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0;
+  /* padding: 2rem 6.5rem 0.8rem; */
+}
+
+.textContainer:hover .text2{
+    color: rgb(190, 185, 185);
+   opacity: 1;
+  width: 100%;
+   background-color:transparent;
+ transition: 1s;
+ 
+}
+.textContainer:hover .text1{
+    color: rgb(190, 185, 185);
+ transition: 2.5s;
+ 
+}
+
+
+input{
+  display: block;
+  padding: 0.2rem 0.9rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  outline: none;
+  color: white;
+  /* border:2px solid rgb(19, 9, 207) ; */
+  border:2px solid rgb(15, 11, 83) ;
+    /* background-color: rgb(6, 4, 51); */
+    background-color: transparent;
+
+}
+
+.movieContainer{
+  width: 400px;
+  height: 500px;
+  display: block;
+  background-color:rgb(29, 23, 138) ;
+box-shadow: 2px 5px 5px rgb(49, 40, 233), 0 -5px 0 rgb(49, 40, 233);
+border-radius: 10px;
+margin-top: 40px;
+position: relative;
+    overflow: hidden;
+
+}
+
+/* input::placeholder{
+
+} */
+
+input:focus{
+    border:2px solid rgb(19, 9, 207) ;
+}
+
+.filmWrapper{
+  position: relative;
+  width: 100%;
+  height: 500px;
+  /* background-color: yellow; */
+}
+
+.filmWrapper img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movieDetailsBox{
+  display: flex;
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 1rem;
+  background-color: rgba(6, 4, 51, 0.911); 
+   align-items: center;
+  justify-content: space-between;
+    color: rgb(190, 185, 185);
+    transition:1s ease-in;
+  }
+
+.titleCont{
+  /* background-color: aqua; */
+  width: 50%;
+  word-wrap: break-word;
+}
+
+.movieDetailsBox span{
+  width: 40px;
+  background-color: rgb(15, 11, 83);
+  padding: 0.3rem;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 1px 2px 0px rgb(49, 40, 233);
+  text-align: center;
+}
+ .movieDetailsBox span.blue{
+  color: rgb(102, 102, 235);
+}
+.movieDetailsBox span.green{
+  color: rgb(18, 156, 18);
+}
+.movieDetailsBox span.red{
+ color: rgb(206, 22, 22);
+}
+
+.overview{
+  width: 400px;
+   max-width: 100%;
+   height:0;
+   color: beige;
+  background-color: rgba(17, 14, 83, 0.904);    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: auto;
+    padding: 2rem;
+    opacity:0;
+      transition: 1s ease-out;
+
+}
+
+.overview > small{
+  width: 100%;
+  font-weight: bold;
+}
+
+.overview::-webkit-scrollbar-thumb {
+  background-color: rgb(90, 75, 156);
+  border-radius: 20px;
+  border: 3px inset rgba(0, 0, 0, 0.3);
+}
+
+.overview::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.overview::-webkit-scrollbar {
+  width:0.5rem;
+  height: 0.5em;
+}
+
+.movieContainer:hover .overview{
+  opacity: 1;
+  height: 500px;
+  transition: 1s;
+}
+
+.movieContainer:hover .movieDetailsBox{
+  opacity: 0;
+}
+
+.overview h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.triangle-wrapper{
+  width: 100%;
+  height:100px ;
+  position: absolute;
+bottom: 0;
+  left: 0;
+  /* background-color: aqua; */
+/* z-index: 1; */
+background-color: transparent;
+overflow: hidden;
+
+}
+
+ .triangle {
+   width: 6rem;
+   height: 6rem;
+text-align: center;
+   background-color:rgb(228, 166, 10);
+border: 5px solid rgb(21, 15, 143);
+   border-radius: 10%;
+   transform: rotate(45deg);
+   position: absolute;
+   right: 2%;
+   z-index: 3;
+   top:40.1% ;
+   border-bottom: 0;
+   overflow: hidden;
+ }
+
+ .triangle p {
+   text-align: center;
+   font-size: 1rem;
+   padding: 15px 20px 10px 20px;
+   margin-left: -25px;
+   width: 100%;
+   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+   letter-spacing: 3px;
+   line-height: 25px;
+   transform: rotate(315deg);
+ }
+ 
+ .triangle a {
+   color: rgba(20, 6, 70, 0.973);
+   text-decoration: none;
+  display: block;
+  width: 100%;
+ }
+
+@media (max-width: 1300px){
+  .header {
+          width: 100%;    
+            height: fit-content;
+      padding: 1rem;
+      background-color: rgba(6, 4, 51, 0.815);
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 5px 1px rgb(24, 13, 189);
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 9999;
+      border: none;
+      backdrop-filter: blur(8px);
+  
+    }
+  
+    .header .btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: transparent;
+      height: 100px;
+      position: relative;
+      padding: 0.5rem ;
+      margin: 0 auto;
+    }
+  
+    .header button {
+      padding: 0.3rem;
+      width: 100px;
+      border-radius: 10px;
+      color: goldenrod;
+      outline: none;
+      cursor: pointer;
+      border: 2px solid rgb(19, 9, 207);
+      font-weight: 500;
+      background-color: transparent;
+  
+  
+    }
+  
+    
+    
+  
+    input {
+      max-width: 100%;
+      display: block;
+      padding: 0.2rem 0.9rem;
+      border-radius: 20px;
+      font-size: 1rem;
+      outline: none;
+      color: white;
+      border: 2px solid rgb(15, 11, 83);
+      background-color: transparent;
+  
+    }
+
+        .mainContainer {
+          min-height: 100vh;
+          background-color: rgb(15, 11, 83);
+          display: flex;
+          padding: 12rem 1.5rem 4rem;
+          column-gap: 40px;
+          position: relative;
+          justify-content:center;
+          align-items: center;
+          font-family: "Lucida Sans",
+            "Lucida Sans Regular",
+            "Lucida Grande",
+            "Lucida Sans Unicode",
+            Geneva,
+            Verdana,
+            sans-serif;
+        }
+
+                .mainContainer>* {
+                  flex-basis: 400px;
+                  flex-grow: 1;
+                  flex-shrink: 0;
+                }
+
+                .movieContainer {
+                   max-width: 100%;
+                  height: 500px;
+                  display: block;
+                  background-color: rgb(29, 23, 138);
+                  box-shadow: 2px 5px 5px rgb(49, 40, 233), 0 -5px 0 rgb(49, 40, 233);
+                  border-radius: 10px;
+                  margin-top: 40px;
+                  position: relative;
+                  overflow: hidden;
+        
+                }
+
+
+.triangle {
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  background-color: rgb(228, 166, 10);
+  border: 5px solid rgb(21, 15, 143);
+  border-radius: 10%;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 3%;
+  z-index: 3;
+  top: 50%;
+  border-bottom: 0;
+  overflow: hidden;
+}
+
+.triangle p {
+  text-align: center;
+  font-size: 1rem;
+  padding: 7px 20px 10px 20px;
+  margin-left: -18px;
+  width: 100%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 3px;
+  line-height: 25px;
+  transform: rotate(315deg);
+}
+
+.triangle a {
+  color: rgba(20, 6, 70, 0.973);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+}
