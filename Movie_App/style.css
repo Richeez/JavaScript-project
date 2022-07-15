@@ -78,10 +78,127 @@ position: relative;
     border: 2px solid rgb(19, 9, 207);
     font-weight:500;
       background-color: transparent;
-
+position: relative;
 
 }
 
+.header button::before{
+  content: '';
+  display:block;
+  height: fit-content;
+  width: 400px;
+  /* max-width: 100%; */
+  background-color:rgba(0, 0, 0, 0.514);
+  position: absolute;
+  color: antiquewhite;
+  cursor: text;
+  /* top: -80%; */
+    /* left: 50%; */
+    z-index: 22;
+    /* transform: translate(-50%, -50%); */
+  /* white-space: nowrap; */
+  /* bottom: ; */
+  font-size: 0.75rem;
+  padding: 0.5rem ;
+  border-radius: 3px;
+
+}
+
+.header .Sort::before{
+      content: 'Toggle to sort movies from descending to ascending order and vise versa by ranking.';
+      text-align: start;
+  position: absolute;
+  /* width: 300px; */
+  height: fit-content;
+  transform: scale(0);
+  top: 0;
+  bottom:-50% ;
+  left: -200%;
+    transition: transform 0.5s ease-in-out,
+      left 500ms ease-in-out, bottom 500ms ease-in-out,
+      top 500ms ease-in-out,right 500ms ease-in-out;
+  /* bottom: 100%; */
+  
+}
+
+.header .Sort:hover::before {
+  transform: scale(1);
+    width: 300px;
+  bottom: 100%;
+  top: -200%;
+  left:0;
+}
+
+/* .header::after{
+  content: 'Search feature coming soon.... ';
+  font-size: 1rem;
+  
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: antiquewhite;
+  width: 100%;
+  transform: scale(0);
+  background-color: rgba(228, 166, 8, 0.671);
+  transition: transform 500ms ease-in-out;
+} */
+
+.notice{
+  font-size: 1rem;
+    display: none;
+    position: absolute;
+    /* padding: .1rem 1rem; */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: antiquewhite;
+    width: 100%;
+    transform: scale(0);
+    background-color: rgba(228, 166, 8, 0.671);
+    transition: transform 500ms ease-in-out;
+}
+
+.additional-margin{
+  margin-bottom: 10px;
+
+}
+
+.reveal{
+  display: block;
+  transform: scale(1);
+   padding: .1rem 1rem;
+    font-size: .9rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+
+.header .Reset::before {
+  content: 'Click to reload page';
+  display: block;
+  text-align: center;
+  height: fit-content;
+  position: absolute;
+  /* right: -80%; */
+top: 0;
+  bottom: -50%;
+  right: 0;
+  left: -150%;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out,
+    right 500ms ease-in-out, bottom 500ms ease-in-out,
+    top 500ms ease-in-out;
+}
+
+.header .Reset:hover::before {
+  transform: scale(1);
+    width: 200px;
+    bottom: 100%;
+    top: -200%;
+    left: -30%;
+  }
 .textContainer{
 position: relative;
 padding: 2rem 6.5rem 0.8rem;
@@ -143,6 +260,7 @@ width: 0;
     color: rgb(190, 185, 185);
    opacity: 1;
   width: 100%;
+    font-size: 40px;
    background-color:transparent;
  transition: 1s;
  
@@ -177,6 +295,7 @@ box-shadow: 2px 5px 5px rgb(49, 40, 233), 0 -5px 0 rgb(49, 40, 233);
 border-radius: 10px;
 margin-top: 40px;
 position: relative;
+    z-index: 5;
     overflow: hidden;
 
 }
@@ -219,7 +338,7 @@ input:focus{
 .titleCont{
   /* background-color: aqua; */
   width: 50%;
-  word-wrap: break-word;
+  word-wrap: normal;
 }
 
 .movieDetailsBox span{
@@ -301,14 +420,62 @@ input:focus{
   position: absolute;
 bottom: 0;
   left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.151), rgb(15, 11, 83));
   /* background-color: aqua; */
 /* z-index: 1; */
-background-color: transparent;
-overflow: hidden;
+/* background-color: transparent; */
+/* overflow: hidden; */
 
 }
 
- .triangle {
+.Dev-contact-cont{
+  width: 100%;
+  padding: 20px 25px 10px 10px;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.151), rgb(15, 11, 83));
+  /* font-weight: bold; */
+  display: flex;
+  color: white;
+  letter-spacing: 1.5px;
+  /* background-color: orangered; */
+  /* text-shadow: 1px 1px 1px goldenrod; */
+  z-index: 2;
+  font-weight: 600;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: "Lucida Sans",
+      "Lucida Sans Regular",
+      "Lucida Grande",
+      "Lucida Sans Unicode",
+      Geneva,
+      Verdana,
+      sans-serif;
+}
+
+i{
+  margin-left: 3px;
+    color: blue;
+      text-shadow: 1px 1px 2px goldenrod;
+}
+a{
+  text-decoration: none;
+  color: goldenrod;
+  /* font-weight: bold; */
+  /* text-shadow: 1px 1px 2px white; */
+
+}
+
+.Dev-contact-wrapper{
+  width: 400px;
+  max-width: 100%;
+  padding: 10px;
+  /* background-color: orangered; */
+}
+
+ /* .triangle {
    width: 6rem;
    height: 6rem;
 text-align: center;
@@ -318,29 +485,56 @@ border: 5px solid rgb(21, 15, 143);
    transform: rotate(45deg);
    position: absolute;
    right: 2%;
-   z-index: 3;
-   top:40.1% ;
+   /* z-index: 1; 
+   top:-150% ;
    border-bottom: 0;
    overflow: hidden;
- }
+ } */
 
- .triangle p {
-   text-align: center;
-   font-size: 1rem;
-   padding: 15px 20px 10px 20px;
-   margin-left: -25px;
-   width: 100%;
-   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-   letter-spacing: 3px;
-   line-height: 25px;
-   transform: rotate(315deg);
- }
  
  .triangle a {
    color: rgba(20, 6, 70, 0.973);
    text-decoration: none;
   display: block;
   width: 100%;
+ }
+
+ .triangle {
+   width: 0;
+   height: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* background-color: transparent; */
+
+   border-right: 80px solid transparent;
+   border-left: 80px solid transparent;
+   border-bottom: 80px solid rgb(228, 166, 10);
+   position: absolute;
+   z-index: 10;
+   /* border-radius: 10px; */
+      /* background-color: rgb(228, 166, 10); */
+        /* border: 5px solid rgb(21, 15, 143); */
+   top: 60%;
+   right: 2%;
+   bottom: 0;
+ }
+
+ .triangle i {
+   text-align: center;
+   font-size: 1.5rem;
+   /* margin-top: 60px; */
+   /* color: var(--text-color); */
+   position: absolute;
+      color: rgb(2, 2, 37);
+   top: 50%;
+   left: 50%;
+   transform: translate(-60%, 50%);
+
+ }
+
+ .triangle a {
+   color: var(--text-color);
  }
 
 @media (max-width: 1300px){
@@ -370,7 +564,7 @@ border: 5px solid rgb(21, 15, 143);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: transparent;
+      background-color:transparent;
       height: 100px;
       position: relative;
       padding: 0.5rem ;
@@ -390,8 +584,56 @@ border: 5px solid rgb(21, 15, 143);
   
   
     }
+
+    .header .Sort::before{
+      content: 'Toggle to sort movies from descending to ascending order and vise versa by ranking.';
+
+      text-align: center;
+      height: fit-content;
+      position: absolute;
+      transform: scale(0);
+      left: -150%;
+      top: 0;
+      bottom: 0;
+      /* padding: .5rem 1.5rem; */
+      text-align: start;
+      transition: transform 0.5s ease-in-out,
+          left 500ms ease-in-out, bottom 500ms ease-in-out,
+          top 500ms ease-in-out;
+    }
+
+        .header .Sort:hover::before{
+          width: 300px;
+          transform: scale(1);
+          bottom: 100%;
+          top: -200%;
+          left: -30%;
+        }
+
+        .header .Reset::before{
+          content: 'Click to reload page';
+          display: none;
+          text-align: center;
+          height: fit-content;
+          position: absolute;
+          left: -150%;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          transform: scale(0);
+          transition: transform 0.5s ease-in-out,
+          right 500ms ease-in-out
+          ,bottom 500ms ease-in-out,
+          top 500ms ease-in-out;
+        }
   
-    
+    .header .Reset:hover::before{
+      transform: scale(1);
+      bottom: 100%;
+      top: -200%;
+      right: 30%;
+       width: 200px;
+    }
     
   
     input {
@@ -445,11 +687,11 @@ border: 5px solid rgb(21, 15, 143);
                 }
 
 
-.triangle {
-  width: 6rem;
-  height: 6rem;
+/* .triangle {
+  width: 5rem;
+  height: 5rem;
   text-align: center;
-  background-color: rgb(228, 166, 10);
+  background-color: rgba(228, 166, 10, 0.322);
   border: 5px solid rgb(21, 15, 143);
   border-radius: 10%;
   transform: rotate(45deg);
@@ -459,25 +701,107 @@ border: 5px solid rgb(21, 15, 143);
   top: 50%;
   border-bottom: 0;
   overflow: hidden;
+} */
+
+.triangle {
+  width: 0;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: transparent; */
+
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-bottom: 50px solid rgb(228, 166, 10);
+  position: absolute;
+  z-index: 10;
+  /* border-radius: 10px; */
+  /* background-color: rgb(228, 166, 10); */
+  /* border: 5px solid rgb(21, 15, 143); */
+  top: 45%;
+  right: 2%;
+  bottom: 0;
+}
+.triangle i {
+  text-align: center;
+  font-size: 1.5rem;
+  /* margin-top: 60px; */
+      color: rgb(2, 2, 37);
+        position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, 50%);
+
+}
+.triangle a {
+  color: var(--text-color);
 }
 
-.triangle p {
-  text-align: center;
-  font-size: 1rem;
-  padding: 7px 20px 10px 20px;
-  margin-left: -18px;
+.Dev-contact-cont {
   width: 100%;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  letter-spacing: 3px;
-  line-height: 25px;
-  transform: rotate(315deg);
+  padding: 25px 25px 0 10px;
+  font-size: .83rem;
+  display: flex;
+  color: rgb(223, 221, 217);
+  text-shadow: 1px 1px 1px goldenrod;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  letter-spacing: 1.5px;
+  font-family: "Lucida Sans",
+    "Lucida Sans Regular",
+    "Lucida Grande",
+    "Lucida Sans Unicode",
+    Geneva,
+    Verdana,
+    sans-serif;
 }
+
+.triangle-wrapper {
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  bottom: 0;
+  /* padding-bottom:55px ; */
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.151), rgb(15, 11, 83));
+  /* background-color: aqua; */
+  /* z-index: 1; */
+  background-color: transparent;
+  overflow: hidden;
+
+}
+
+i {
+  margin-left: 3px;
+  color: blue;
+  text-shadow: 1px 1px 1px goldenrod;
+}
+
+a {
+  text-decoration: none;
+  color: goldenrod;
+  /* font-weight: bold; */
+  /* text-shadow: 1px 1px 2px white; */
+
+}
+
+.Dev-contact-wrapper {
+  width: 400px;
+  max-width: 100%;
+margin-left: -10px;
+padding: 4px;
+  /* background-color: orangered; */
+}
+
 
 .triangle a {
   color: rgba(20, 6, 70, 0.973);
   text-decoration: none;
   display: block;
   width: 100%;
+    text-shadow: 1px 1px 2px white;
 }
 
 }

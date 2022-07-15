@@ -254,7 +254,23 @@
       font-size: 1rem;
       font-weight: bold;
     }
+
+    .todo-container p::after{
+      content: '';
+      display: inline-block;
+      height: 17px;
+      margin-left: 1px;
+      animation: cursor-blink 0.5s steps(2) infinite;
+      border: 1px solid #000000;
+    }
   
+
+    @keyframes cursor-blink{
+      0%{
+        opacity: 0;
+      }
+
+    }
     .close.hints {
       display: none;
     }

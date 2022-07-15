@@ -76,7 +76,7 @@ const infos =["Toggle on either text or icon to mark your todo as completed or u
   
  let display = document.querySelector(".text") ;
   
-  
+let deleteTyped = '';
 let typing = "";
   
 let count = 0; //IDEA: //?___for monitoring the length of each index in an array
@@ -107,8 +107,9 @@ let isError=false
         console.log("approaching setTimeout")
         setTimeout(()=>{
           console.log("timeout")
-          count=0; 
-         hint++;
+          hint++;
+          count =0;
+            // infos[hint].slice(0, `-${count}`)
         },3000); //* makes each index delay on view for 3 sec.
      
       
@@ -120,8 +121,9 @@ let isError=false
       console.log("approaching second setTimeout")
      setTimeout(()=>{
           console.log("second timeout")
+          typing = infos[hint].slice(0,count) //*responsible for making index count with each text.
        count++;
-     },1000) //* Allows the count begins immediately each index comes in play.
+     },1000) //* Allows the count begin immediately each index comes in play.
       
     }
     
@@ -131,7 +133,6 @@ let isError=false
     console.log('count',count)
       console.log(typing)
 
-    typing = infos[hint].slice(0,count) //*responsible for making index count with each text.
 
 display.innerText = typing
 
@@ -157,7 +158,7 @@ display.innerText = typing
    
  
      
-//     },200)
+//     },500)
     
     
  

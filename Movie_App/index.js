@@ -6,7 +6,24 @@ const IMG_PATH= 'https://image.tmdb.org/t/p/w1280'
 
 const mainContainer = document.querySelector(".mainContainer");
 const movieContainer = document.querySelector(".movieContainer");
-// const testing = document.querySelector(".testing");
+
+const notice = document.querySelector(".notice");
+
+const input = document.querySelector("input");
+
+
+const timeOut = 25000
+input.addEventListener('click', () => {
+  notice.classList.add('reveal');
+  input.classList.add('additional-margin');
+
+  setTimeout(() => {
+    notice.classList.remove('reveal');
+  input.classList.remove('additional-margin');
+
+  }, timeOut);
+});
+
 let respData = [];
 
 
@@ -54,13 +71,23 @@ const getMovies = async () => {
              const toTOP = document.createElement("div") 
                toTOP.classList.add("triangle-wrapper");
           toTOP.innerHTML = `<div class="triangle">
-        <p><a href="#"> &nbsp;To <br> &nbsp;Top</a></p>
+        <a href="#"><i class="fa fa-arrow-up"></i></a>
      </div>`;
-            
+          const Dev_Contact_Cont = document.createElement('div');
+          Dev_Contact_Cont.classList.add('Dev-contact-cont');
+
+          Dev_Contact_Cont.innerHTML =`
+            <div class="Dev-contact-wrapper"><p class="my-name">Developer's Name: Saturday Richard</p>
+          <p class="my-contact">
+            <a href="tel:+2349035034329">
+              Contact Developer<i class="fas fa-phone"></i
+            ></a>
+          </p></div>`
             movieContainer.appendChild(filmWrapper);
             filmWrapper.appendChild(overView);
-            mainContainer.appendChild(movieContainer);
-            mainContainer.appendChild(toTOP);
+          mainContainer.appendChild(movieContainer);
+          mainContainer.appendChild(toTOP);
+          toTOP.appendChild(Dev_Contact_Cont)
  
             
         });
