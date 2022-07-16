@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body{
+ background-color: rgb(15, 11, 83);
+}
 .mainContainer {
   width: 100%;
   height: fit-content;
